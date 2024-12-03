@@ -9,3 +9,6 @@ In this lab, various synchronization methods were compared to identify the most 
 
 ### Lab 3: Scheduling Techniques
 This lab focused on the use of scheduling techniques in OpenMP and the implementation of data distribution methods in MPI to optimize parallel execution. In OpenMP, different scheduling policies were examined, including Static, Dynamic, and Guided. Each scheduling method was implemented in a parallel program, and the impact on performance was measured. Additionally, MPI methods such as Scatter, Scatterv, Gather, and Gatherv were utilized for distributing and collecting data among processes. The goal was to understand how different scheduling strategies and data distribution techniques affect load balancing and overall execution time in parallel applications. 
+
+### Lab 4: CUDA
+In this lab, the focus was on developing parallel programs using CUDA to harness the computational power of GPUs. Key concepts such as thread hierarchy, memory management, and kernel optimization were explored.
