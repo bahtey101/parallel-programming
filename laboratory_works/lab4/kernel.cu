@@ -4,8 +4,6 @@
 #include <stdlib.h>
 
 #define NMAX 6000000
-#define GRID_DIM 128
-#define BLOCK_DIM 1024
 #define ITERATIONS 20
 
 __global__ void addKernel(int* a, int* b, int* s, unsigned int size) {
@@ -17,7 +15,15 @@ __global__ void addKernel(int* a, int* b, int* s, unsigned int size) {
     }
 }
 
-int main() {
+int main(int argc, char* argv[]) {
+    int GRID_DIM  = 128;
+    int BLOCK_DIM = 1024;
+
+    if (argc > 2) {
+       GRID_DIM  = atoi(argv[1]);
+       BLOCK_DIM = atoi(argv[2]);
+   }
+
     int n2i = NMAX * sizeof(int);
     // Выделение памяти на хосте
     int* a = (int*)calloc(NMAX, sizeof(int));
